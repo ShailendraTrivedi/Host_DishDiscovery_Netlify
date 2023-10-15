@@ -21,6 +21,7 @@ export const loginAction = (values, navigate) => {
         // const data = JSON.parse(sessionStorage.getItem("loginUser"));
         dispatch({ type: LOGIN_AUTH_SUCCESS, payload: response.data });
         toast.success("Login Successfully");
+        navigate("/");
         setTimeout(() => {
           window.location.reload();
         }, 2000);
